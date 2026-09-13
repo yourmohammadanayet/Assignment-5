@@ -23,7 +23,7 @@ function StackPanel({ selectedStack, onRemove, onRemoveAll }) {
 
       </div>
 
-      {/* Empty State */}
+      {/* Empty  State */}
       {selectedCount === 0 ? (
         <div className="mt-4 flex min-h-[78px] items-center justify-center rounded-xl border border-dashed border-[#E2E8F0] px-4">
 
