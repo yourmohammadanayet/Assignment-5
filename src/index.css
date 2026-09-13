@@ -19,9 +19,19 @@ html {
 
 body {
   margin: 0;
+  min-width: 320px;
   font-family: Inter, Arial, sans-serif;
   background: #ffffff;
   color: #0f172a;
+}
+
+button,
+a {
+  font-family: inherit;
+}
+
+button {
+  cursor: pointer;
 }
 
 .brand-gradient {
@@ -30,7 +40,8 @@ body {
 
 .gradient-text {
   background: var(--brand-gradient);
-  -webkit-background-clip: text;
   background-clip: text;
+  -webkit-background-clip: text;
   color: transparent;
+  -webkit-text-fill-color: transparent;
 }

@@ -14,9 +14,9 @@ function Navbar() {
         {/* Desktop Navbar */}
         <div className="hidden h-20 items-center justify-between md:flex">
 
-          {/* Brand */}
+          {/* Logo */}
           <a href="#" className="flex items-center gap-[10px]">
-            <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-[#EC4899] to-[#7C3AED] text-sm font-extrabold tracking-[-0.5px] text-white shadow-sm">
+            <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-[#EC4899] to-[#7C3AED] text-sm font-extrabold text-white shadow-sm">
               DS
             </div>
 
@@ -69,13 +69,13 @@ function Navbar() {
             </a>
           </div>
 
-          {/* Authentication */}
+          {/* Auth */}
           <div className="flex items-center gap-5">
             <button className="text-sm font-medium text-[#334155]">
               Sign In
             </button>
 
-            <button className="rounded-full bg-[#D91B7E] px-5 py-[10px] text-sm font-semibold text-white shadow-[0_1px_1px_#FBCFE8]">
+            <button className="rounded-full bg-[#D91B7E] px-5 py-[10px] text-sm font-semibold text-white">
               Sign Up
             </button>
           </div>
@@ -84,7 +84,6 @@ function Navbar() {
         {/* Mobile Navbar */}
         <div className="grid h-16 grid-cols-[40px_1fr_auto] items-center gap-2 md:hidden">
 
-          {/* Hamburger */}
           <button
             onClick={() => setMenuOpen(!menuOpen)}
             className="flex h-9 w-9 items-center justify-center"
@@ -97,13 +96,12 @@ function Navbar() {
             </div>
           </button>
 
-          {/* Mobile Brand */}
           <a
             href="#"
             onClick={closeMenu}
             className="flex items-center justify-center gap-2"
           >
-            <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-gradient-to-br from-[#EC4899] to-[#7C3AED] text-sm font-extrabold text-white shadow-sm">
+            <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-gradient-to-br from-[#EC4899] to-[#7C3AED] text-sm font-extrabold text-white">
               DS
             </div>
 
@@ -118,7 +116,6 @@ function Navbar() {
             </span>
           </a>
 
-          {/* Mobile Auth */}
           <div className="flex items-center justify-end gap-2">
             <button className="whitespace-nowrap text-[11px] font-medium text-[#334155]">
               Sign In
@@ -130,10 +127,11 @@ function Navbar() {
           </div>
         </div>
 
-        {/* Mobile Dropdown */}
+        {/* Mobile Menu */}
         {menuOpen && (
           <div className="border-t border-[#F1F5F9] py-4 md:hidden">
             <div className="flex flex-col gap-1">
+
               <a
                 href="#"
                 onClick={closeMenu}
@@ -173,9 +171,11 @@ function Navbar() {
               >
                 Contact
               </a>
+
             </div>
           </div>
         )}
+
       </nav>
     </header>
   );
