@@ -1,10 +1,12 @@
+import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
+
 function App() {
   return (
-    <main>
-      <h1 className="sr-only">
-        Dev Stack
-      </h1>
-    </main>
+    <>
+      <Navbar />
+      <Hero />
+    </>
   );
 }
 

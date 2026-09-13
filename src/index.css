@@ -3,8 +3,8 @@
 :root {
   --brand-gradient: linear-gradient(
     90deg,
-    #ff6a1a 0%,
-    #ec4899 50%,
+    #ff5722 0%,
+    #d81b7e 50%,
     #7c3aed 100%
   );
 }
