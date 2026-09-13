@@ -24,13 +24,16 @@ function TechnologyCard({ technology, onAdd, isAdded }) {
   };
 
   return (
-    <div className="flex min-h-[276px] flex-col justify-between rounded-2xl border border-[#F1F5F9] bg-white p-[21px] shadow-[0_2px_10px_-3px_rgba(0,0,0,0.05)]">
-
-      {/* Top */}
+    <div
+      className={`flex min-h-[276px] flex-col justify-between rounded-2xl bg-white p-[21px] transition-all duration-200 ${
+        isAdded
+          ? "border border-[#F9A8D4] shadow-[0_2px_12px_-3px_rgba(219,39,119,0.18)]"
+          : "border border-[#F1F5F9] shadow-[0_2px_10px_-3px_rgba(0,0,0,0.05)]"
+      }`}
+    >
+      {/* Top Content */}
       <div>
-
         <div className="flex items-start justify-between">
-
           <div className="flex h-10 w-10 items-center justify-center">
             <img
               src={icon}
@@ -48,7 +51,6 @@ function TechnologyCard({ technology, onAdd, isAdded }) {
               {badge}
             </span>
           )}
-
         </div>
 
         <h3 className="mt-[6px] text-[18px] font-bold leading-7 text-[#0F172A]">
@@ -58,14 +60,11 @@ function TechnologyCard({ technology, onAdd, isAdded }) {
         <p className="mt-[2px] text-[12px] leading-[19.5px] text-[#64748B]">
           {description}
         </p>
-
       </div>
 
-      {/* Bottom */}
+      {/* Bottom Content */}
       <div>
-
         <div className="flex items-center justify-between border-t border-[#F8FAFC] pt-[9px]">
-
           <span className="rounded bg-[#F1F5F9] px-2 py-[2px] text-[11px] font-medium text-[#475569]">
             {category}
           </span>
@@ -75,7 +74,6 @@ function TechnologyCard({ technology, onAdd, isAdded }) {
           </span>
 
           <div className="flex items-center gap-1">
-
             <span className="text-[12px] text-[#F59E0B]">
               ★
             </span>
@@ -83,25 +81,21 @@ function TechnologyCard({ technology, onAdd, isAdded }) {
             <span className="text-[11px] font-semibold text-[#334155]">
               {rating}
             </span>
-
           </div>
-
         </div>
 
         <button
           onClick={() => onAdd(technology)}
           disabled={isAdded}
-          className={`mt-4 w-full rounded-lg py-[10px] text-[12px] font-medium transition ${
+          className={`mt-4 w-full rounded-lg py-[10px] text-[12px] font-semibold transition-all duration-200 ${
             isAdded
-              ? "cursor-not-allowed bg-[#E2E8F0] text-[#64748B]"
+              ? "cursor-not-allowed border border-[#FBCFE8] bg-[#FDF2F8] text-[#DB2777]"
               : "bg-[#0A0F1D] text-white hover:bg-[#161D2D]"
           }`}
         >
           {isAdded ? "✓ Added to Stack" : "Add to Stack"}
         </button>
-
       </div>
-
     </div>
   );
 }
